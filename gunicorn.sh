@@ -1,0 +1,9 @@
+#!/bin/sh
+
+GUNICORN_TIMEOUT=${GUNICORN_TIMEOUT:-300}
+GUNICORN_WORKERS=${GUNICORN_WORKERS:-2}
+
+echo "GUNICORN Timeout value: $GUNICORN_TIMEOUT"
+echo "GUNICORN workers value: $GUNICORN_WORKERS"
+
+cd src && gunicorn --timeout $GUNICORN_TIMEOUT --workers $GUNICORN_WORKERS --bind 0.0.0.0:5000 app:app

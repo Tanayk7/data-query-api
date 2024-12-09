@@ -1,0 +1,11 @@
+SQLAlchemy
+Flask
+pandas
+boto3
+psycopg2
+python-dotenv
+gunicorn
+ariadne
+pytest 
+pytest-flask
+flasgger

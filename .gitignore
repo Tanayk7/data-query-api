@@ -1,0 +1,7 @@
+test.rest
+__pycache__
+venv
+*.csv
+*.env
+scripts
+.pytest_cache
