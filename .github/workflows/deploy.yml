@@ -37,6 +37,8 @@ jobs:
 
       # The pipeline will fail and stop if any tests fail
       - name: Run tests
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           source venv/bin/activate
           pytest --maxfail=1 --disable-warnings
